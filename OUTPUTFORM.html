@@ -257,6 +257,109 @@
 }
 
 </STYLE> 
+<style>
+/* ==== PDF TEXT FIX ==== */
+
+.case-box,
+.case-box-large {
+  min-height: 120px;
+  height: auto !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  word-wrap: break-word;
+}
+
+/* Bigger sections */
+.case-box-large {
+  min-height: 180px;
+}
+
+/* Prevent overlap */
+.section {
+  page-break-inside: avoid;
+}
+
+/* Table cells */
+td, div {
+  vertical-align: top;
+}
+</style>
+<style>
+/* ==== PREVENTION FIX ==== */
+
+.case-box-large{
+  min-height: 180px;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.prevention-text{
+  display: block;
+  margin-top: 6px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* Stop overlapping */
+.section{
+  page-break-inside: avoid;
+}
+</style>
+<style>
+.case-box-large{
+  min-height: 180px;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.prevention-text{
+  display: block;
+  margin-top: 6px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.section{
+  page-break-inside: avoid;
+}
+</style>
+<style>
+.case-box-large{
+  min-height: 180px;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.description-empty{
+  min-height: 100px;   /* empty writing space */
+}
+
+.section{
+  page-break-inside: avoid;
+}
+</style>
+<style>
+.case-box-large{
+  min-height: 160px;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.prevention-text{
+  display: block;
+  margin-top: 6px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.section{
+  page-break-inside: avoid;
+}
+</style>
+
 </head>
 	<body>
 		<div class="pdf24_ pdf24_02">
@@ -277,9 +380,26 @@
 					<div class="pdf24_01" style="left:20.8142em;top:13.6608em;"><span class="pdf24_14 pdf24_08 pdf24_22" style="word-spacing:0.0035em;">CASE INFORMATION &nbsp;</span></div>
 					<div class="pdf24_01" style="left:1.8092em;top:15.4156em;"><span class="pdf24_23 pdf24_11 pdf24_24" style="word-spacing:-0.002em;">Details of Incident / Error : <span id="oDetails"></span><br><br> &nbsp;</span></div>
 					<div class="pdf24_01" style="left:1.8092em;top:16.8656em;"><span class="pdf24_23 pdf24_11 pdf24_25" style="word-spacing:-0.0013em;">Date of Incident / Error : <span id="oDate"></span><br><br> &nbsp;</span></div>
-					<div class="pdf24_01" style="left:1.84em;top:18.2632em;"><span class="pdf24_26 pdf24_08 pdf24_17" style="word-spacing:0.0006em;">Description of Incident / Error : <span id="oDescriptionLabel"></span> &nbsp;</span></div>
-					<div class="pdf24_01" style="left:1.8402em;top:31.9457em;"><span class="pdf24_26 pdf24_08 pdf24_27" style="word-spacing:0.0005em;">Prevention of Mistake : <span id="oPrevention"></span> &nbsp;</span></div>
-					<div class="pdf24_01" style="left:1.8402em;top:45.6274em;"><span class="pdf24_26 pdf24_08 pdf24_17" style="word-spacing:0.0005em;">Acknowledgement of Mistake : &nbsp;</span></div>
+	<div class="pdf24_01 case-box-large section"
+     style="left:1.84em; top:18.2632em; position: relative !important;">
+
+  <span class="pdf24_26 pdf24_08 pdf24_17">
+    Description of Incident / Error :
+  </span>
+
+  <div id="oDescriptionLabel" class="prevention-text"></div>
+
+</div>
+
+
+					<div class="pdf24_01 case-box-large section" style="left:1.8402em;top:31.9457em;">
+  <span class="pdf24_26 pdf24_08 pdf24_27">
+    Prevention of Mistake :
+  </span>
+  <div id="oPrevention" class="prevention-text"></div>
+</div>
+
+<div class="pdf24_01" style="left:1.8402em;top:45.6274em;"><span class="pdf24_26 pdf24_08 pdf24_17" style="word-spacing:0.0005em;">Acknowledgement of Mistake : &nbsp;</span></div>
 					<div class="pdf24_01" style="left:20.0342em;top:60.0775em;"><span class="pdf24_14 pdf24_08 pdf24_28" style="word-spacing:0.0206em;">READ AND AGREED BY : &nbsp;</span></div>
 					<div class="pdf24_01" style="left:15.6413em;top:62.1144em;"><span class="pdf24_16 pdf24_08 pdf24_29">Date &nbsp;</span></div>
 					<div class="pdf24_01" style="left:15.6413em;top:62.8164em;"><span class="pdf24_16 pdf24_08 pdf24_30" style="word-spacing:-0.0058em;">Interviewed : &nbsp;</span></div>
