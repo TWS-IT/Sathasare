@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Incident Input Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- JS -->
+<script src="script.js"></script>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+body{
+  font-family: Arial, sans-serif;
+  background:#f2f2f2;
+  margin:0;
+  padding:10px;
+}
+.form-box{
+  max-width:650px;
+  margin:auto;
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+}
+h2{
+  text-align:center;
+  margin-bottom:15px;
+}
+label{
+  font-weight:bold;
+  display:block;
+  margin-top:12px;
+}
+input, textarea{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  font-size:14px;
+}
+textarea{
+  resize:vertical;
+}
+button{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  background:#1e8f1e;
+  color:#fff;
+  border:none;
+  font-size:16px;
+  border-radius:5px;
+  cursor:pointer;
+}
+button:hover{
+  background:#166e16;
+}
+
+/* Mobile friendly */
+@media (max-width:480px){
+  h2{font-size:18px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+<h2>Incident Report – Input Form</h2>
+
+<label>Name</label>
+<input type="text" id="fullName" placeholder="Enter full name">
+
+<label>Nick Name</label>
+<input type="text" id="nickName" placeholder="Enter nick name">
+
+<label>Initial</label>
+<input type="text" placeholder="Enter initials (for reference only)">
+
+<label>Emp No</label>
+<input type="text" placeholder="Employee Number (for reference only)">
+
+<label>Position</label>
+<input type="text" id="position" placeholder="Enter position">
+
+<label>Details Of Incident / Error</label>
+<textarea id="details" rows="3" placeholder="Enter details of incident or error"></textarea>
+
+<label>Date of Incident</label>
+<input type="date" id="dateIncident">
+
+<label>Description Of Incident / Error</label>
+<textarea rows="3" placeholder="Description (will NOT be printed)"></textarea>
+
+<label>Prevention of Mistakes</label>
+<textarea id="prevention" rows="3" placeholder="Enter prevention of mistakes"></textarea>
+
+<button onclick="generatePDF()">Submit & Download PDF</button>
+</div>
+
+</body>
+</html>
